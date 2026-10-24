@@ -13,28 +13,54 @@
   });
 
 
-  const fluidLoader = document.getElementById('fluidLoader');
-  const loaderTrack = document.getElementById('loaderTrack');
-  const loaderPercent = document.getElementById('loaderPercent');
-  let loaderValue = 0;
-  const loaderTimer = setInterval(() => {
-    loaderValue = Math.min(loaderValue + Math.floor(Math.random() * 8) + 4, 92);
-    if (loaderTrack) loaderTrack.style.width = `${loaderValue}%`;
-    if (loaderPercent) loaderPercent.textContent = String(loaderValue).padStart(2,'0');
-    if (loaderValue >= 92) clearInterval(loaderTimer);
-  }, 85);
-  const finishLoader = () => {
-    clearInterval(loaderTimer);
-    if (loaderTrack) loaderTrack.style.width = '100%';
-    if (loaderPercent) loaderPercent.textContent = '100';
-    setTimeout(() => {
-      window.dispatchEvent(new Event('luscoReady'));
-      fluidLoader?.classList.add('is-hidden');
-      document.body.classList.remove('is-loading');
-    }, 240);
+  const ronyLoader = document.getElementById('ronyLoader');
+  const loaderBar = ronyLoader?.querySelector('.rony-loader__bar span');
+
+  // Loader puramente estético. Usamos Web Animations API em vez de CSS keyframes/transition
+  // para que a sequência continue suave mesmo quando o sistema está com
+  // prefers-reduced-motion ativado (a regra global do site reduz transições CSS a 0.001ms).
+  const playLoader = async () => {
+    if (!ronyLoader || !loaderBar || ronyLoader.dataset.played === 'true') return;
+    ronyLoader.dataset.played = 'true';
+
+    // Garante que o navegador pinte o primeiro frame (barra em 0%) antes de animar.
+    await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+
+    const barAnimation = loaderBar.animate(
+      [
+        { transform: 'scaleX(0)' },
+        { transform: 'scaleX(1)' }
+      ],
+      {
+        duration: 1150,
+        easing: 'cubic-bezier(.76,0,.24,1)',
+        fill: 'forwards'
+      }
+    );
+    await barAnimation.finished;
+
+    // Respiro curto como na referência antes do painel começar a sair.
+    await new Promise(resolve => setTimeout(resolve, 140));
+
+    const wipeAnimation = ronyLoader.animate(
+      [
+        { transform: 'translate3d(0,0,0)' },
+        { transform: 'translate3d(0,-100%,0)' }
+      ],
+      {
+        duration: 820,
+        easing: 'cubic-bezier(.76,0,.24,1)',
+        fill: 'forwards'
+      }
+    );
+    await wipeAnimation.finished;
+
+    ronyLoader.classList.add('is-hidden');
+    document.body.classList.remove('is-loading');
+    window.dispatchEvent(new Event('luscoReady'));
   };
-  window.addEventListener('load', finishLoader, {once:true});
-  setTimeout(finishLoader, 2600);
+
+  playLoader();
 
   const techOut = document.querySelector('.tech-icons output');
   document.querySelectorAll('.tech-icons button').forEach(btn => {
@@ -143,4 +169,27 @@
     onEnter:()=>document.body.classList.add('in-method'),
     onLeaveBack:()=>document.body.classList.remove('in-method')
   });
+})();
+
+
+// Mobile navigation — isolated from the existing GSAP/loader logic.
+(() => {
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const nav = document.getElementById('mainNav');
+  if (!toggle || !nav) return;
+  const closeMenu = () => {
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Abrir menu');
+    nav.classList.remove('is-open');
+    document.body.classList.remove('menu-open');
+  };
+  toggle.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') !== 'true';
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    nav.classList.toggle('is-open', open);
+    document.body.classList.toggle('menu-open', open);
+  });
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  window.addEventListener('resize', () => { if (window.innerWidth > 980) closeMenu(); });
 })();

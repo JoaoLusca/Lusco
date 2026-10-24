@@ -5,53 +5,16 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Lusco — portfólio de João Lucas. Estratégia, direção visual e desenvolvimento para negócios que precisam de uma presença digital com intenção." />
   <title>Lusco — sites que começam no problema, não na ferramenta</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon-lusco.svg">
+  <meta name="theme-color" content="#7a20df">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="is-loading">
-  <div class="fluid-loader" id="fluidLoader" aria-hidden="true">
-    <div class="fluid-loader__content">
-      <svg class="fluid-loader__art" viewBox="0 0 520 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <linearGradient id="fluidG1" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#d93cb1"/>
-            <stop offset=".52" stop-color="#7a20df"/>
-            <stop offset="1" stop-color="#2587e8"/>
-          </linearGradient>
-          <linearGradient id="fluidG2" x1="1" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#ff6f3c"/>
-            <stop offset=".5" stop-color="#b46cff"/>
-            <stop offset="1" stop-color="#17b6b1"/>
-          </linearGradient>
-          <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
-            <feGaussianBlur stdDeviation="12" result="blur"/>
-            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-        </defs>
-        <path class="fluid-shape fluid-shape--a" fill="url(#fluidG1)" opacity=".94" filter="url(#softGlow)">
-          <animate attributeName="d" dur="5.2s" repeatCount="indefinite"
-            values="M88,102 C121,39 224,34 282,62 C347,94 421,78 451,128 C481,179 435,245 369,257 C298,271 253,235 194,254 C132,274 56,246 53,184 C51,148 70,131 88,102 Z;
-                    M74,122 C111,54 188,35 252,60 C317,85 401,61 449,112 C493,158 464,235 399,261 C338,285 284,248 224,261 C158,276 82,251 57,198 C41,164 55,145 74,122 Z;
-                    M88,102 C121,39 224,34 282,62 C347,94 421,78 451,128 C481,179 435,245 369,257 C298,271 253,235 194,254 C132,274 56,246 53,184 C51,148 70,131 88,102 Z"/>
-        </path>
-        <path class="fluid-shape fluid-shape--b" fill="url(#fluidG2)" opacity=".76">
-          <animate attributeName="d" dur="4.4s" repeatCount="indefinite"
-            values="M117,169 C133,113 190,92 239,111 C281,127 326,106 360,132 C396,159 392,214 351,237 C313,259 275,232 237,243 C190,257 129,236 117,195 C113,184 113,177 117,169 Z;
-                    M127,157 C151,108 201,99 245,116 C294,134 335,106 370,142 C399,172 381,220 348,237 C310,256 273,227 233,242 C190,258 139,235 124,198 C116,179 120,169 127,157 Z;
-                    M117,169 C133,113 190,92 239,111 C281,127 326,106 360,132 C396,159 392,214 351,237 C313,259 275,232 237,243 C190,257 129,236 117,195 C113,184 113,177 117,169 Z"/>
-        </path>
-        <path class="fluid-line fluid-line--a" d="M28 192 C115 122 173 235 253 164 C325 101 393 203 492 119"/>
-        <path class="fluid-line fluid-line--b" d="M34 225 C114 164 175 266 254 194 C332 123 399 230 488 153"/>
-        <circle class="fluid-dot fluid-dot--1" cx="92" cy="79" r="8"/>
-        <circle class="fluid-dot fluid-dot--2" cx="435" cy="78" r="5"/>
-        <circle class="fluid-dot fluid-dot--3" cx="463" cy="235" r="9"/>
-      </svg>
-      <div class="fluid-loader__word">LUSCO</div>
-      <div class="fluid-loader__caption">DANDO FORMA À IDEIA <span id="loaderPercent">00</span>%</div>
-      <div class="fluid-loader__track"><span id="loaderTrack"></span></div>
-    </div>
+  <div class="rony-loader" id="ronyLoader" aria-hidden="true">
+    <div class="rony-loader__bar"><span></span></div>
   </div>
 
   <div class="noise" aria-hidden="true"></div>
@@ -59,15 +22,21 @@
 
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Lusco — início"><img src="assets/lusco-logo.svg" alt="Lusco"></a>
-    <nav aria-label="Navegação principal">
+    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu">
+      <span></span><span></span>
+    </button>
+    <nav id="mainNav" aria-label="Navegação principal">
       <a href="#historia">História</a>
       <a href="#projetos">Projetos</a>
       <a href="#metodo">Método</a>
       <a href="#contato">Contato</a>
+      <a class="nav-social" href="https://www.instagram.com/joaoluscadsgn/" target="_blank" rel="noreferrer">Instagram ↗</a>
+      <a class="nav-social" href="https://wa.me/5561993771036?text=Oi%20Jo%C3%A3o%2C%20vim%20pelo%20site%20da%20Lusco%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noreferrer">WhatsApp ↗</a>
     </nav>
     <a class="header-cta" href="#contato">COMEÇAR UM PROJETO ↗</a>
   </header>
 
+  <div id="app">
   <main id="top">
     <section class="hero chapter chapter--hero">
       <div class="hero-kicker">DESENVOLVIMENTO · DIREÇÃO VISUAL · ESTRATÉGIA DIGITAL</div>
@@ -269,8 +238,17 @@
   <footer>
     <img src="assets/lusco-logo.svg" alt="Lusco">
     <span>JOÃO LUCAS · 2026</span>
+    <div class="footer-socials" aria-label="Redes sociais e contato">
+      <a href="https://www.instagram.com/joaoluscadsgn/" target="_blank" rel="noreferrer">Instagram ↗</a>
+      <a href="https://wa.me/5561993771036?text=Oi%20Jo%C3%A3o%2C%20vim%20pelo%20site%20da%20Lusco%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noreferrer">WhatsApp ↗</a>
+    </div>
     <span>DESIGN + CÓDIGO + CONTEXTO</span>
   </footer>
+  </div>
+
+  <a class="whatsapp-float" href="https://wa.me/5561993771036?text=Oi%20Jo%C3%A3o%2C%20vim%20pelo%20site%20da%20Lusco%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noreferrer" aria-label="Falar com João Lucas pelo WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M27.4 4.6A15.5 15.5 0 0 0 3 23.3L1 31l7.9-2.1A15.5 15.5 0 0 0 31 15 15.4 15.4 0 0 0 27.4 4.6Zm-11.9 23a12.7 12.7 0 0 1-6.5-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5A12.7 12.7 0 1 1 15.5 27.6Zm7-9.5c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.6-.2.3-.5.3-.9.1-2.3-1.1-3.8-2-5.3-4.6-.4-.7.4-.7 1.1-2.2.1-.3 0-.6-.1-.8l-1.2-3c-.3-.7-.7-.6-.9-.6h-.8c-.3 0-.8.1-1.2.6-.4.4-1.6 1.6-1.6 3.9s1.7 4.5 1.9 4.8c.2.3 3.4 5.2 8.2 7.3 3 1.3 4.1 1.4 5.6 1.2 1-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.8-.5Z" fill="currentColor"/></svg>
+  </a>
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
