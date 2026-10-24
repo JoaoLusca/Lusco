@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Lusco — portfólio de João Lucas. Estratégia, direção visual e desenvolvimento para negócios que precisam de uma presença digital com intenção." />
+  <title>Lusco — sites que começam no problema, não na ferramenta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="is-loading">
+  <div class="fluid-loader" id="fluidLoader" aria-hidden="true">
+    <div class="fluid-loader__content">
+      <svg class="fluid-loader__art" viewBox="0 0 520 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="fluidG1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#d93cb1"/>
+            <stop offset=".52" stop-color="#7a20df"/>
+            <stop offset="1" stop-color="#2587e8"/>
+          </linearGradient>
+          <linearGradient id="fluidG2" x1="1" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ff6f3c"/>
+            <stop offset=".5" stop-color="#b46cff"/>
+            <stop offset="1" stop-color="#17b6b1"/>
+          </linearGradient>
+          <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur stdDeviation="12" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <path class="fluid-shape fluid-shape--a" fill="url(#fluidG1)" opacity=".94" filter="url(#softGlow)">
+          <animate attributeName="d" dur="5.2s" repeatCount="indefinite"
+            values="M88,102 C121,39 224,34 282,62 C347,94 421,78 451,128 C481,179 435,245 369,257 C298,271 253,235 194,254 C132,274 56,246 53,184 C51,148 70,131 88,102 Z;
+                    M74,122 C111,54 188,35 252,60 C317,85 401,61 449,112 C493,158 464,235 399,261 C338,285 284,248 224,261 C158,276 82,251 57,198 C41,164 55,145 74,122 Z;
+                    M88,102 C121,39 224,34 282,62 C347,94 421,78 451,128 C481,179 435,245 369,257 C298,271 253,235 194,254 C132,274 56,246 53,184 C51,148 70,131 88,102 Z"/>
+        </path>
+        <path class="fluid-shape fluid-shape--b" fill="url(#fluidG2)" opacity=".76">
+          <animate attributeName="d" dur="4.4s" repeatCount="indefinite"
+            values="M117,169 C133,113 190,92 239,111 C281,127 326,106 360,132 C396,159 392,214 351,237 C313,259 275,232 237,243 C190,257 129,236 117,195 C113,184 113,177 117,169 Z;
+                    M127,157 C151,108 201,99 245,116 C294,134 335,106 370,142 C399,172 381,220 348,237 C310,256 273,227 233,242 C190,258 139,235 124,198 C116,179 120,169 127,157 Z;
+                    M117,169 C133,113 190,92 239,111 C281,127 326,106 360,132 C396,159 392,214 351,237 C313,259 275,232 237,243 C190,257 129,236 117,195 C113,184 113,177 117,169 Z"/>
+        </path>
+        <path class="fluid-line fluid-line--a" d="M28 192 C115 122 173 235 253 164 C325 101 393 203 492 119"/>
+        <path class="fluid-line fluid-line--b" d="M34 225 C114 164 175 266 254 194 C332 123 399 230 488 153"/>
+        <circle class="fluid-dot fluid-dot--1" cx="92" cy="79" r="8"/>
+        <circle class="fluid-dot fluid-dot--2" cx="435" cy="78" r="5"/>
+        <circle class="fluid-dot fluid-dot--3" cx="463" cy="235" r="9"/>
+      </svg>
+      <div class="fluid-loader__word">LUSCO</div>
+      <div class="fluid-loader__caption">DANDO FORMA À IDEIA <span id="loaderPercent">00</span>%</div>
+      <div class="fluid-loader__track"><span id="loaderTrack"></span></div>
+    </div>
+  </div>
+
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span></span></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Lusco — início"><img src="assets/lusco-logo.svg" alt="Lusco"></a>
+    <nav aria-label="Navegação principal">
+      <a href="#historia">História</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#metodo">Método</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="header-cta" href="#contato">COMEÇAR UM PROJETO ↗</a>
+  </header>
+
+  <main id="top">
+    <section class="hero chapter chapter--hero">
+      <div class="hero-kicker">DESENVOLVIMENTO · DIREÇÃO VISUAL · ESTRATÉGIA DIGITAL</div>
+      <h1 class="hero-title color-play" aria-label="Eu não faço sites. Eu construo presença.">
+        <span>EU</span> <span>NÃO</span> <span>FAÇO</span> <span>SITES.</span><br>
+        <span class="accent">EU</span> <span class="accent">CONSTRUO</span> <span class="accent">PRESENÇA.</span>
+      </h1>
+      <p class="hero-deck">Quando uma empresa não consegue traduzir o que ela é na tela, o problema raramente é “falta de um site”. É falta de direção. É aí que eu entro.</p>
+
+      <div class="hero-portrait-wrap">
+        <img class="hero-portrait" src="assets/joao-studio.png" alt="João Lucas, profissional por trás da Lusco">
+        <img class="tentacle tentacle--hero-a" src="assets/tentacle-a.svg" alt="" aria-hidden="true">
+        <img class="tentacle tentacle--hero-b" src="assets/tentacle-b.svg" alt="" aria-hidden="true">
+        <div class="hero-note">NÃO SOU AGÊNCIA.<br><strong>NÃO SOU MAIS UM.</strong></div>
+      </div>
+
+      <div class="hero-bottomline">
+        <span>JOÃO LUCAS / LUSCO</span>
+        <span>BRASIL · 2026</span>
+        <a href="#historia">MERGULHAR ↓</a>
+      </div>
+    </section>
+
+    <section class="ticker" aria-hidden="true"><div>PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL ×</div></section>
+
+    <section id="historia" class="chapter origin">
+      <div class="chapter-mark">01 / DE ONDE EU VIM</div>
+      <div class="origin-grid">
+        <p class="origin-small split-reveal">Antes de pensar em tecnologia, eu pensava em Arte, Composição e Intenção. Em como uma ideia muda quando ganha uma direção visual.</p>
+        <h2 class="origin-title split-reveal">EU ENTREI<br>PELO <em>VISUAL.</em></h2>
+        <div class="origin-side">
+          <p>Design me ensinou que comunicação não é enfeite. É percepção.</p>
+          <p>Foi daí que comecei a construir identidades, páginas e experiências digitais.</p>
+        </div>
+        <div class="origin-stroke" aria-hidden="true">01</div>
+      </div>
+    </section>
+
+    <section class="chapter transition-story">
+      <img class="tentacle tentacle--transition" src="assets/tentacle-c.svg" alt="" aria-hidden="true">
+      <div class="chapter-mark">02 / O QUE MUDOU</div>
+      <div class="transition-copy">
+        <h2 class="split-reveal">MAS UM LAYOUT<br><span>BONITO</span> NÃO RESOLVE<br>UM NEGÓCIO.</h2>
+        <p>Quanto mais eu construía, mais percebia que a tela era só a superfície. Por baixo dela existiam posicionamento, conteúdo, comportamento, performance, lógica e decisão.</p>
+      </div>
+      <div class="transition-code">
+        <span>design</span><span>→</span><span>front-end</span><span>→</span><span>software</span><span>→</span><span>negócio</span>
+      </div>
+    </section>
+
+    <section class="chapter now">
+      <div class="now-statement">
+        <div class="chapter-mark">03 / PARA ONDE EU FUI</div>
+        <h2 class="split-reveal">HOJE EU NÃO COMEÇO<br>PELA <span>FERRAMENTA.</span></h2>
+        <p>Estudo e sigo aprofundando desenvolvimento porque quero entender o que acontece além da interface. Mas a tecnologia continua sendo o meio, e nunca o argumento principal.</p>
+      </div>
+      <blockquote class="quote-block">“Um site só faz sentido quando ajuda alguém a perceber melhor o valor de um negócio.”</blockquote>
+    </section>
+
+    <section class="chapter why">
+      <div class="why-word">POR QUÊ?</div>
+      <div class="why-copy">
+        <p class="chapter-mark">04 / POR QUE EU FAÇO ISSO</p>
+        <h2 class="split-reveal">PORQUE NEGÓCIOS BONS<br>PODEM PARECER <span>COMUNS</span><br>NA INTERNET.</h2>
+        <p>Minha função é reduzir essa distância. Entender o que existe de forte na empresa e transformar isso em uma experiência digital que tenha voz, ritmo, intenção e resultado.</p>
+      </div>
+    </section>
+
+    <section id="projetos" class="chapter work-intro">
+      <div class="chapter-mark">05 / TRABALHOS</div>
+      <h2 class="split-reveal">CINCO NEGÓCIOS.<br><span>CINCO PROBLEMAS DIFERENTES.</span></h2>
+      <p>Não existe template Lusco. Cada projeto abaixo exigiu uma leitura diferente.</p>
+    </section>
+
+    <section class="work-canvas" aria-label="Projetos selecionados">
+      <article class="project project--1">
+        <a class="project-image" href="https://joaolusca.github.io/Fhabiola-Mercaldo/" target="_blank" rel="noreferrer">
+          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fjoaolusca.github.io%2FFhabiola-Mercaldo%2F?w=1600" alt="Site Fhabiolla Mercaldo">
+          <span class="project-no">01</span>
+        </a>
+        <div class="project-copy">
+          <p>DIREITO / AUTORIDADE / CONFIANÇA</p>
+          <h3>Fhabiolla<br>Mercaldo</h3>
+          <p class="project-desc">O desafio era construir presença e segurança visual em um segmento em que confiança vem antes do clique.</p>
+          <a href="https://joaolusca.github.io/Fhabiola-Mercaldo/" target="_blank" rel="noreferrer">ABRIR CASE ↗</a>
+        </div>
+      </article>
+
+      <article class="project project--2">
+        <div class="project-copy">
+          <p>PSICOLOGIA / ACOLHIMENTO / CLAREZA</p>
+          <h3>Catarina<br>Romano</h3>
+          <p class="project-desc">Menos ruído, mais acolhimento. Uma presença digital pensada para criar confiança antes mesmo da primeira conversa.</p>
+          <a href="https://catarinaromano.com.br/" target="_blank" rel="noreferrer">ABRIR CASE ↗</a>
+        </div>
+        <a class="project-image" href="https://catarinaromano.com.br/" target="_blank" rel="noreferrer">
+          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fcatarinaromano.com.br%2F?w=1500" alt="Site Catarina Romano">
+          <span class="project-no">02</span>
+        </a>
+      </article>
+
+      <article class="project project--3">
+        <a class="project-image" href="https://studioespacoessencial.com.br/" target="_blank" rel="noreferrer">
+          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fstudioespacoessencial.com.br%2F?w=1400" alt="Site Studio Espaço Essencial">
+          <span class="project-no">03</span>
+        </a>
+        <div class="project-copy">
+          <p>BELEZA / DESEJO / CONVERSÃO</p>
+          <h3>Espaço<br>Essencial</h3>
+          <p class="project-desc">Serviços diferentes organizados em uma jornada clara, estética e direta para ação.</p>
+          <a href="https://studioespacoessencial.com.br/" target="_blank" rel="noreferrer">ABRIR CASE ↗</a>
+        </div>
+      </article>
+
+      <article class="project project--4">
+        <a class="project-image" href="https://mobicomunicacao.com.br/" target="_blank" rel="noreferrer">
+          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmobicomunicacao.com.br%2F?w=1600" alt="Site Mobi Comunicação">
+          <span class="project-no">04</span>
+        </a>
+        <div class="project-copy project-copy--dark">
+          <p>COMUNICAÇÃO / MOVIMENTO / PRESENÇA</p>
+          <h3>MOBI</h3>
+          <p class="project-desc">Uma empresa que vive de movimento precisava de um site com energia, ritmo e presença.</p>
+          <a href="https://mobicomunicacao.com.br/" target="_blank" rel="noreferrer">ABRIR CASE ↗</a>
+        </div>
+      </article>
+
+      <article class="project project--5">
+        <div class="project-copy">
+          <p>ALTO PADRÃO / ARQUITETURA / EDITORIAL</p>
+          <h3>OTTOS</h3>
+          <p class="project-desc">Aqui, o trabalho foi tirar o site do caminho para deixar arquitetura, matéria, escala e intenção falarem.</p>
+          <a href="https://construtoracasasuberlandia.com.br/" target="_blank" rel="noreferrer">ABRIR CASE ↗</a>
+        </div>
+        <a class="project-image" href="https://construtoracasasuberlandia.com.br/" target="_blank" rel="noreferrer">
+          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fconstrutoracasasuberlandia.com.br%2F?w=1700" alt="Site OTTOS Construtora">
+          <span class="project-no">05</span>
+        </a>
+      </article>
+    </section>
+
+    <section class="break-line chapter">
+      <p class="split-reveal">MESMA INTERNET.<br><span>PROBLEMAS DIFERENTES.</span><br>SOLUÇÕES DIFERENTES.</p>
+      <img class="tentacle tentacle--break" src="assets/tentacle-a.svg" alt="" aria-hidden="true">
+    </section>
+
+    <section id="metodo" class="chapter method">
+      <div class="method-lead">
+        <p class="chapter-mark">06 / COMO EU PENSO</p>
+        <h2 class="split-reveal">EU NÃO TENHO<br>UM <span>PACOTE.</span><br>TENHO UM PROCESSO.</h2>
+      </div>
+      <div class="method-stream">
+        <div class="method-item"><span>01</span><strong>ENTENDER</strong><p>O que o negócio precisa mudar na percepção, na comunicação ou na conversão.</p></div>
+        <div class="method-item"><span>02</span><strong>TRADUZIR</strong><p>Transformar estratégia em narrativa, hierarquia, ritmo e direção visual.</p></div>
+        <div class="method-item"><span>03</span><strong>CONSTRUIR</strong><p>Escolher e combinar tecnologias que façam sentido para aquela experiência.</p></div>
+        <div class="method-item"><span>04</span><strong>REFINAR</strong><p>Testar, cortar excessos, melhorar movimento, responsividade e performance.</p></div>
+      </div>
+    </section>
+
+    <section class="chapter tech-sentence">
+      <p class="chapter-mark">07 / TECNOLOGIA</p>
+      <p class="tech-big split-reveal">HTML. CSS. JAVASCRIPT. GSAP. FIGMA. GIT. APIs. SEO.</p>
+      <p class="tech-small">Não como lista de serviços. Como repertório. A ferramenta muda. O critério continua.</p>
+      <div class="tech-icons" aria-label="Tecnologias utilizadas">
+        <button data-label="HTML — estrutura semântica">HTML</button>
+        <button data-label="CSS — composição e responsividade">CSS</button>
+        <button data-label="JavaScript — comportamento e lógica">JS</button>
+        <button data-label="GSAP — motion e narrativa">GSAP</button>
+        <button data-label="Figma — direção e prototipação">FIGMA</button>
+        <button data-label="Git — versionamento e fluxo de desenvolvimento">GIT</button>
+        <output>passe o mouse</output>
+      </div>
+    </section>
+
+    <section class="chapter human">
+      <div class="human-copy">
+        <p class="chapter-mark">08 / HUMANO POR TRÁS DA INTERFACE</p>
+        <h2 class="split-reveal">LUSCO É UMA MARCA.<br><span>MAS TEM UMA PESSOA AQUI.</span></h2>
+        <p>Sou João Lucas. Gosto de design, tecnologia e, principalmente, de entender por que alguma coisa não está funcionando como deveria.</p>
+        <p>Não quero ser uma agência genérica com dez pacotes. Quero ser o profissional que senta do outro lado da mesa, entende o contexto e constrói a resposta certa NA SUA FRENTE.</p>
+      </div>
+      <div class="human-image">
+        <img src="assets/joao-studio-2.png" alt="João Lucas">
+        <img class="tentacle tentacle--human" src="assets/tentacle-b.svg" alt="" aria-hidden="true">
+      </div>
+    </section>
+
+    <section id="contato" class="chapter contact">
+      <p class="chapter-mark">09 / PRÓXIMO MERGULHO</p>
+      <h2 class="color-play"><span>SEU</span> <span>NEGÓCIO</span> <span>NÃO</span> <span>PRECISA</span><br><span>DE</span> <span>MAIS</span> <span>UM</span> <span>SITE.</span><br><span class="accent">PRECISA</span> <span class="accent">DE</span> <span class="accent">UMA</span> <span class="accent">PRESENÇA.</span></h2>
+      <div class="contact-row">
+        <p>Se existe algo forte no seu negócio que ainda não aparece quando alguém entra no seu site, esse é um bom ponto de partida para a conversa.</p>
+        <a class="contact-btn" href="https://wa.me/5561993771036?text=Oi%20Jo%C3%A3o%2C%20vim%20pelo%20site%20da%20Lusco%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noreferrer">VAMOS CONVERSAR ↗</a>
+      </div>
+      <img class="tentacle tentacle--contact" src="assets/tentacle-c.svg" alt="" aria-hidden="true">
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/lusco-logo.svg" alt="Lusco">
+    <span>JOÃO LUCAS · 2026</span>
+    <span>DESIGN + CÓDIGO + CONTEXTO</span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+<script>
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('#app'),
+            smooth: true,
+        });
+        /* Expõe instância para que o footer.js possa ouvir eventos */
+        window.LocomotiveScrollInstance = scroll;
+    </script>
+</body>
+</html>

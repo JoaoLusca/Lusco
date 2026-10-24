@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520">
+  <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2=".7"><stop stop-color="#5f12b0"/><stop offset=".55" stop-color="#9e49ff"/><stop offset="1" stop-color="#5c149d"/></linearGradient></defs>
+  <path d="M26 441c129 34 194-40 210-126 20-109-49-149-36-225 11-62 86-92 139-61 47 28 48 93 15 123-29 26-76 18-91-16-11-27 7-56 35-52-22 11-24 37-7 49 24 18 60 0 61-31 2-47-59-70-102-36-58 46-29 118 17 164 65 65 52 161-11 218-55 49-139 70-230-7z" fill="url(#g2)" stroke="#160824" stroke-width="12" stroke-linejoin="round"/>
+  <g fill="#f4f0e8" stroke="#160824" stroke-width="7"><ellipse cx="129" cy="442" rx="17" ry="12" transform="rotate(-16 129 442)"/><ellipse cx="180" cy="414" rx="16" ry="11" transform="rotate(-26 180 414)"/><ellipse cx="218" cy="368" rx="15" ry="10" transform="rotate(-42 218 368)"/><ellipse cx="236" cy="310" rx="14" ry="10" transform="rotate(-72 236 310)"/><ellipse cx="227" cy="252" rx="13" ry="9" transform="rotate(-96 227 252)"/><ellipse cx="208" cy="194" rx="12" ry="8" transform="rotate(-105 208 194)"/><ellipse cx="211" cy="133" rx="11" ry="8" transform="rotate(-78 211 133)"/></g>
+</svg>
