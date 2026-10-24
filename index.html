@@ -5,14 +5,67 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Lusco — portfólio de João Lucas. Estratégia, direção visual e desenvolvimento para negócios que precisam de uma presença digital com intenção." />
   <title>Lusco — sites que começam no problema, não na ferramenta</title>
+  <meta name="author" content="João Lucas">
+  <link rel="canonical" href="https://joaolusca.github.io/Lusco/">
   <link rel="icon" type="image/svg+xml" href="assets/favicon-lusco.svg">
   <meta name="theme-color" content="#7a20df">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Lusco">
+  <meta property="og:title" content="Lusco — sites que começam no problema, não na ferramenta">
+  <meta property="og:description" content="Portfólio de João Lucas. Estratégia, direção visual e desenvolvimento para negócios que precisam de uma presença digital com intenção.">
+  <meta property="og:url" content="https://joaolusca.github.io/Lusco/">
+  <meta property="og:image" content="https://joaolusca.github.io/Lusco/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Retrato de João Lucas, profissional por trás da Lusco">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://joaolusca.github.io/Lusco/#website",
+        "url": "https://joaolusca.github.io/Lusco/",
+        "name": "Lusco",
+        "inLanguage": "pt-BR",
+        "author": { "@id": "https://joaolusca.github.io/Lusco/#joao" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://joaolusca.github.io/Lusco/#joao",
+        "name": "João Lucas",
+        "url": "https://joaolusca.github.io/Lusco/",
+        "image": "https://joaolusca.github.io/Lusco/assets/og-image.jpg",
+        "knowsAbout": ["Desenvolvimento web", "Direção visual", "Estratégia digital"],
+        "sameAs": ["https://www.instagram.com/joaoluscadsgn/"]
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@400;500&family=Inter:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    /* Mantém o hero invisível (ele já fica sob o loader) até as fontes web carregarem,
+       evitando o layout shift da troca de fonte nos títulos. Máx. 2,5 s. */
+    (function(d){
+      if(!d.fonts||!d.fonts.load)return;
+      var r=d.documentElement;r.classList.add('fonts-pending');
+      var done=function(){r.classList.remove('fonts-pending')};
+      Promise.all(['1em "Archivo Black"','400 1em Inter','500 1em "DM Mono"'].map(function(f){return d.fonts.load(f)})).then(done,done);
+      setTimeout(done,2500);
+    })(document);
+  </script>
+  <noscript><style>.rony-loader{display:none}body.is-loading{overflow:auto}</style></noscript>
 </head>
 <body class="is-loading">
+  <a class="skip-link" href="#top">Pular para o conteúdo</a>
   <div class="rony-loader" id="ronyLoader" aria-hidden="true">
     <div class="rony-loader__bar"><span></span></div>
   </div>
@@ -21,11 +74,11 @@
   <div class="cursor" aria-hidden="true"><span></span></div>
 
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Lusco — início"><img src="assets/lusco-logo.svg" alt="Lusco"></a>
+    <a class="brand" href="#top" aria-label="Lusco — início"><img src="assets/lusco-logo.svg" alt="Lusco" width="158" height="88"></a>
     <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu">
       <span></span><span></span>
     </button>
-    <nav id="mainNav" aria-label="Navegação principal">
+    <nav id="mainNav" aria-label="Navegação principal" data-lenis-prevent>
       <a href="#historia">História</a>
       <a href="#projetos">Projetos</a>
       <a href="#metodo">Método</a>
@@ -37,7 +90,7 @@
   </header>
 
   <div id="app">
-  <main id="top">
+  <main id="top" tabindex="-1">
     <section class="hero chapter chapter--hero">
       <div class="hero-kicker">DESENVOLVIMENTO · DIREÇÃO VISUAL · ESTRATÉGIA DIGITAL</div>
       <h1 class="hero-title color-play" aria-label="Eu não faço sites. Eu construo presença.">
@@ -47,7 +100,7 @@
       <p class="hero-deck">Quando uma empresa não consegue traduzir o que ela é na tela, o problema raramente é “falta de um site”. É falta de direção. É aí que eu entro.</p>
 
       <div class="hero-portrait-wrap">
-        <img class="hero-portrait" src="assets/joao-studio.png" alt="João Lucas, profissional por trás da Lusco">
+        <img class="hero-portrait" src="assets/joao-studio-1312.webp" srcset="assets/joao-studio-760.webp 760w, assets/joao-studio-1312.webp 1312w" sizes="(max-width:600px) 126vw, (max-width:980px) min(118vw, 690px), min(54vw, 790px)" width="1312" height="1199" fetchpriority="high" alt="João Lucas, profissional por trás da Lusco">
         <img class="tentacle tentacle--hero-a" src="assets/tentacle-a.svg" alt="" aria-hidden="true">
         <img class="tentacle tentacle--hero-b" src="assets/tentacle-b.svg" alt="" aria-hidden="true">
         <div class="hero-note">NÃO SOU AGÊNCIA.<br><strong>NÃO SOU MAIS UM.</strong></div>
@@ -60,7 +113,7 @@
       </div>
     </section>
 
-    <section class="ticker" aria-hidden="true"><div>PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL ×</div></section>
+    <div class="ticker" aria-hidden="true"><div>PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL × PROBLEMA REAL × SOLUÇÃO REAL ×&nbsp;</div></div>
 
     <section id="historia" class="chapter origin">
       <div class="chapter-mark">01 / DE ONDE EU VIM</div>
@@ -76,7 +129,7 @@
     </section>
 
     <section class="chapter transition-story">
-      <img class="tentacle tentacle--transition" src="assets/tentacle-c.svg" alt="" aria-hidden="true">
+      <img class="tentacle tentacle--transition" src="assets/tentacle-c.svg" loading="lazy" decoding="async" alt="" aria-hidden="true">
       <div class="chapter-mark">02 / O QUE MUDOU</div>
       <div class="transition-copy">
         <h2 class="split-reveal">MAS UM LAYOUT<br><span>BONITO</span> NÃO RESOLVE<br>UM NEGÓCIO.</h2>
@@ -97,7 +150,7 @@
     </section>
 
     <section class="chapter why">
-      <div class="why-word">POR QUÊ?</div>
+      <div class="why-word" aria-hidden="true">POR QUÊ?</div>
       <div class="why-copy">
         <p class="chapter-mark">04 / POR QUE EU FAÇO ISSO</p>
         <h2 class="split-reveal">PORQUE NEGÓCIOS BONS<br>PODEM PARECER <span>COMUNS</span><br>NA INTERNET.</h2>
@@ -113,9 +166,35 @@
 
     <section class="work-canvas" aria-label="Projetos selecionados">
       <article class="project project--1">
-        <a class="project-image" href="https://joaolusca.github.io/Fhabiola-Mercaldo/" target="_blank" rel="noreferrer">
-          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fjoaolusca.github.io%2FFhabiola-Mercaldo%2F?w=1600" alt="Site Fhabiolla Mercaldo">
+        <a class="project-image" href="https://construtoracasasuberlandia.com.br/" target="_blank" rel="noreferrer">
+          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fconstrutoracasasuberlandia.com.br%2F?w=1700" loading="lazy" decoding="async" alt="Prévia do site OTTOS Construtora">
           <span class="project-no">01</span>
+        </a>
+        <div class="project-copy">
+          <p>ALTO PADRÃO / ARQUITETURA / EDITORIAL</p>
+          <h3>OTTOS</h3>
+          <p class="project-desc">Aqui, o trabalho foi tirar o site do caminho para deixar arquitetura, matéria, escala e intenção falarem.</p>
+          <a href="https://construtoracasasuberlandia.com.br/" target="_blank" rel="noreferrer">ABRIR CASE ↗</a>
+        </div>
+      </article>
+
+      <article class="project project--2">
+        <div class="project-copy">
+          <p>COMUNICAÇÃO / MOVIMENTO / PRESENÇA</p>
+          <h3>MOBI</h3>
+          <p class="project-desc">Uma empresa que vive de movimento precisava de um site com energia, ritmo e presença.</p>
+          <a href="https://mobicomunicacao.com.br/" target="_blank" rel="noreferrer">ABRIR CASE ↗</a>
+        </div>
+        <a class="project-image" href="https://mobicomunicacao.com.br/" target="_blank" rel="noreferrer">
+          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmobicomunicacao.com.br%2F?w=1600" loading="lazy" decoding="async" alt="Prévia do site Mobi Comunicação">
+          <span class="project-no">02</span>
+        </a>
+      </article>
+
+      <article class="project project--3">
+        <a class="project-image" href="https://joaolusca.github.io/Fhabiola-Mercaldo/" target="_blank" rel="noreferrer">
+          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fjoaolusca.github.io%2FFhabiola-Mercaldo%2F?w=1600" loading="lazy" decoding="async" alt="Prévia do site Fhabiolla Mercaldo">
+          <span class="project-no">03</span>
         </a>
         <div class="project-copy">
           <p>DIREITO / AUTORIDADE / CONFIANÇA</p>
@@ -125,25 +204,12 @@
         </div>
       </article>
 
-      <article class="project project--2">
-        <div class="project-copy">
-          <p>PSICOLOGIA / ACOLHIMENTO / CLAREZA</p>
-          <h3>Catarina<br>Romano</h3>
-          <p class="project-desc">Menos ruído, mais acolhimento. Uma presença digital pensada para criar confiança antes mesmo da primeira conversa.</p>
-          <a href="https://catarinaromano.com.br/" target="_blank" rel="noreferrer">ABRIR CASE ↗</a>
-        </div>
-        <a class="project-image" href="https://catarinaromano.com.br/" target="_blank" rel="noreferrer">
-          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fcatarinaromano.com.br%2F?w=1500" alt="Site Catarina Romano">
-          <span class="project-no">02</span>
-        </a>
-      </article>
-
-      <article class="project project--3">
+      <article class="project project--4">
         <a class="project-image" href="https://studioespacoessencial.com.br/" target="_blank" rel="noreferrer">
-          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fstudioespacoessencial.com.br%2F?w=1400" alt="Site Studio Espaço Essencial">
-          <span class="project-no">03</span>
+          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fstudioespacoessencial.com.br%2F?w=1400" loading="lazy" decoding="async" alt="Prévia do site Studio Espaço Essencial">
+          <span class="project-no">04</span>
         </a>
-        <div class="project-copy">
+        <div class="project-copy project-copy--dark">
           <p>BELEZA / DESEJO / CONVERSÃO</p>
           <h3>Espaço<br>Essencial</h3>
           <p class="project-desc">Serviços diferentes organizados em uma jornada clara, estética e direta para ação.</p>
@@ -151,28 +217,15 @@
         </div>
       </article>
 
-      <article class="project project--4">
-        <a class="project-image" href="https://mobicomunicacao.com.br/" target="_blank" rel="noreferrer">
-          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmobicomunicacao.com.br%2F?w=1600" alt="Site Mobi Comunicação">
-          <span class="project-no">04</span>
-        </a>
-        <div class="project-copy project-copy--dark">
-          <p>COMUNICAÇÃO / MOVIMENTO / PRESENÇA</p>
-          <h3>MOBI</h3>
-          <p class="project-desc">Uma empresa que vive de movimento precisava de um site com energia, ritmo e presença.</p>
-          <a href="https://mobicomunicacao.com.br/" target="_blank" rel="noreferrer">ABRIR CASE ↗</a>
-        </div>
-      </article>
-
       <article class="project project--5">
         <div class="project-copy">
-          <p>ALTO PADRÃO / ARQUITETURA / EDITORIAL</p>
-          <h3>OTTOS</h3>
-          <p class="project-desc">Aqui, o trabalho foi tirar o site do caminho para deixar arquitetura, matéria, escala e intenção falarem.</p>
-          <a href="https://construtoracasasuberlandia.com.br/" target="_blank" rel="noreferrer">ABRIR CASE ↗</a>
+          <p>PSICOLOGIA / ACOLHIMENTO / CLAREZA</p>
+          <h3>Catarina<br>Romano</h3>
+          <p class="project-desc">Menos ruído, mais acolhimento. Uma presença digital pensada para criar confiança antes mesmo da primeira conversa.</p>
+          <a href="https://catarinaromano.com.br/" target="_blank" rel="noreferrer">ABRIR CASE ↗</a>
         </div>
-        <a class="project-image" href="https://construtoracasasuberlandia.com.br/" target="_blank" rel="noreferrer">
-          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fconstrutoracasasuberlandia.com.br%2F?w=1700" alt="Site OTTOS Construtora">
+        <a class="project-image" href="https://catarinaromano.com.br/" target="_blank" rel="noreferrer">
+          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fcatarinaromano.com.br%2F?w=1500" loading="lazy" decoding="async" alt="Prévia do site Catarina Romano">
           <span class="project-no">05</span>
         </a>
       </article>
@@ -180,7 +233,7 @@
 
     <section class="break-line chapter">
       <p class="split-reveal">MESMA INTERNET.<br><span>PROBLEMAS DIFERENTES.</span><br>SOLUÇÕES DIFERENTES.</p>
-      <img class="tentacle tentacle--break" src="assets/tentacle-a.svg" alt="" aria-hidden="true">
+      <img class="tentacle tentacle--break" src="assets/tentacle-a.svg" loading="lazy" decoding="async" alt="" aria-hidden="true">
     </section>
 
     <section id="metodo" class="chapter method">
@@ -201,12 +254,12 @@
       <p class="tech-big split-reveal">HTML. CSS. JAVASCRIPT. GSAP. FIGMA. GIT. APIs. SEO.</p>
       <p class="tech-small">Não como lista de serviços. Como repertório. A ferramenta muda. O critério continua.</p>
       <div class="tech-icons" aria-label="Tecnologias utilizadas">
-        <button data-label="HTML — estrutura semântica">HTML</button>
-        <button data-label="CSS — composição e responsividade">CSS</button>
-        <button data-label="JavaScript — comportamento e lógica">JS</button>
-        <button data-label="GSAP — motion e narrativa">GSAP</button>
-        <button data-label="Figma — direção e prototipação">FIGMA</button>
-        <button data-label="Git — versionamento e fluxo de desenvolvimento">GIT</button>
+        <button type="button" data-label="HTML — estrutura semântica">HTML</button>
+        <button type="button" data-label="CSS — composição e responsividade">CSS</button>
+        <button type="button" data-label="JavaScript — comportamento e lógica">JS</button>
+        <button type="button" data-label="GSAP — motion e narrativa">GSAP</button>
+        <button type="button" data-label="Figma — direção e prototipação">FIGMA</button>
+        <button type="button" data-label="Git — versionamento e fluxo de desenvolvimento">GIT</button>
         <output>passe o mouse</output>
       </div>
     </section>
@@ -219,8 +272,8 @@
         <p>Não quero ser uma agência genérica com dez pacotes. Quero ser o profissional que senta do outro lado da mesa, entende o contexto e constrói a resposta certa NA SUA FRENTE.</p>
       </div>
       <div class="human-image">
-        <img src="assets/joao-studio-2.png" alt="João Lucas">
-        <img class="tentacle tentacle--human" src="assets/tentacle-b.svg" alt="" aria-hidden="true">
+        <img src="assets/joao-studio-2-1122.webp" srcset="assets/joao-studio-2-640.webp 640w, assets/joao-studio-2-1122.webp 1122w" sizes="(max-width:600px) 128vw, (max-width:980px) min(112vw, 680px), min(52vw, 780px)" width="1122" height="1402" loading="lazy" decoding="async" alt="João Lucas">
+        <img class="tentacle tentacle--human" src="assets/tentacle-b.svg" loading="lazy" decoding="async" alt="" aria-hidden="true">
       </div>
     </section>
 
@@ -231,12 +284,12 @@
         <p>Se existe algo forte no seu negócio que ainda não aparece quando alguém entra no seu site, esse é um bom ponto de partida para a conversa.</p>
         <a class="contact-btn" href="https://wa.me/5561993771036?text=Oi%20Jo%C3%A3o%2C%20vim%20pelo%20site%20da%20Lusco%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noreferrer">VAMOS CONVERSAR ↗</a>
       </div>
-      <img class="tentacle tentacle--contact" src="assets/tentacle-c.svg" alt="" aria-hidden="true">
+      <img class="tentacle tentacle--contact" src="assets/tentacle-c.svg" loading="lazy" decoding="async" alt="" aria-hidden="true">
     </section>
   </main>
 
   <footer>
-    <img src="assets/lusco-logo.svg" alt="Lusco">
+    <img src="assets/lusco-logo.svg" alt="Lusco" width="150" height="84" loading="lazy" decoding="async">
     <span>JOÃO LUCAS · 2026</span>
     <div class="footer-socials" aria-label="Redes sociais e contato">
       <a href="https://www.instagram.com/joaoluscadsgn/" target="_blank" rel="noreferrer">Instagram ↗</a>
@@ -250,17 +303,21 @@
     <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M27.4 4.6A15.5 15.5 0 0 0 3 23.3L1 31l7.9-2.1A15.5 15.5 0 0 0 31 15 15.4 15.4 0 0 0 27.4 4.6Zm-11.9 23a12.7 12.7 0 0 1-6.5-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5A12.7 12.7 0 1 1 15.5 27.6Zm7-9.5c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.6-.2.3-.5.3-.9.1-2.3-1.1-3.8-2-5.3-4.6-.4-.7.4-.7 1.1-2.2.1-.3 0-.6-.1-.8l-1.2-3c-.3-.7-.7-.6-.9-.6h-.8c-.3 0-.8.1-1.2.6-.4.4-1.6 1.6-1.6 3.9s1.7 4.5 1.9 4.8c.2.3 3.4 5.2 8.2 7.3 3 1.3 4.1 1.4 5.6 1.2 1-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.8-.5Z" fill="currentColor"/></svg>
   </a>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
-<script>
-        const scroll = new LocomotiveScroll({
-            el: document.querySelector('#app'),
-            smooth: true,
-        });
-        /* Expõe instância para que o footer.js possa ouvir eventos */
-        window.LocomotiveScrollInstance = scroll;
-    </script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@5.0.0-beta.21/bundled/locomotive-scroll.min.js" defer></script>
+  <script>
+    /* Locomotive Scroll v5 (Lenis) rola a própria janela. Inicializa após os scripts com defer. */
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!window.LocomotiveScroll) return;
+      const scroll = new LocomotiveScroll();
+      window.LocomotiveScrollInstance = scroll;
+      if (document.body.classList.contains('is-loading')) {
+        scroll.stop();
+        window.addEventListener('luscoReady', () => scroll.start(), { once: true });
+      }
+    });
+  </script>
 </body>
 </html>
