@@ -49,7 +49,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@400;500&family=Inter:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script>
     /* Mantém o hero invisível (ele já fica sob o loader) até as fontes web carregarem,
@@ -58,7 +58,7 @@
       if(!d.fonts||!d.fonts.load)return;
       var r=d.documentElement;r.classList.add('fonts-pending');
       var done=function(){r.classList.remove('fonts-pending')};
-      Promise.all(['1em "Archivo Black"','400 1em Inter','500 1em "DM Mono"'].map(function(f){return d.fonts.load(f)})).then(done,done);
+      Promise.all(['1em "Archivo Black"','400 1em "DM Mono"','500 1em "DM Mono"'].map(function(f){return d.fonts.load(f)})).then(done,done);
       setTimeout(done,2500);
     })(document);
   </script>

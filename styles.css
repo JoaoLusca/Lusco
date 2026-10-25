@@ -20,7 +20,7 @@
 
   /* famílias — três papéis, com fallbacks de métrica próxima */
   --font-display:'Archivo Black','Arial Black',Impact,sans-serif; /* títulos e frases de impacto */
-  --font-body:Inter,Arial,Helvetica,sans-serif;                    /* texto corrido */
+  --font-body:'DM Mono',ui-monospace,Consolas,'Courier New',monospace; /* texto corrido */
   --font-mono:'DM Mono',ui-monospace,Consolas,'Courier New',monospace; /* rótulos, UI, notas */
 
   /* pesos — Archivo Black só existe em 400; DM Mono em 400/500 (700 = negrito
@@ -38,7 +38,7 @@
   --fs-display-s:clamp(1.75rem,8vw,2.625rem);       /* links do menu mobile */
 
   /* escala de texto */
-  /* texto corrido — sempre Inter */
+  /* texto corrido */
   --fs-lead:1.25rem;      /* 20px parágrafo que acompanha um título de seção */
   --fs-body:1rem;         /* 16px descrição de case/etapa, nota lateral */
   --fs-body-s:.875rem;    /* 14px texto do hero */
@@ -86,7 +86,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-bo
 .break-line>p,.tech-big{font-size:var(--fs-h2)}
 .project-copy h3,.method-item strong{font-size:var(--fs-h3)}
 
-/* Texto corrido (Inter) */
+/* Texto corrido (DM Mono regular) */
 .origin-side,.transition-copy p,.now-statement>p:last-child,.why-copy>p:last-child,.work-intro>p:last-child,
 .tech-small,.human-copy>p:not(.chapter-mark),.contact-row p{font-size:var(--fs-lead);line-height:var(--lh-body)}
 .origin-small,.project-desc,.method-item p{font-size:var(--fs-body);line-height:var(--lh-body)}
